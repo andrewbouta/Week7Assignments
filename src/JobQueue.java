@@ -47,7 +47,7 @@ public class JobQueue {
 		 long[] nextFreeTime = new long[numWorkers];
 		
 		 for (int i = 0; i < jobs.size(); i++) {	// loop for each job to see who is available
-		     int duration = jobs[i];				// find the duration of each.. 1st: 1s; 2nd: 2s etc.
+		     int duration = jobs.element();				// find the duration of each.. 1st: 1s; 2nd: 2s etc.
 		     int bestWorker = 0;
 		 }
    

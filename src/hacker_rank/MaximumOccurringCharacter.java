@@ -71,7 +71,7 @@ public class MaximumOccurringCharacter {
 			if (hMap.containsKey(ch)) { // if hMap has the indexed char already, return it's value
 				int x = hMap.get(ch);	// x var to get the value.
 				int y = x + 1;			// y var to add 1 to the value.
-				hMap.put(ch, y); 		// adds the char, and the associated value 
+				hMap.put(ch, y); 		// adds the char, and the associated value + 1
 			} else {
 				hMap.put(ch, 1);		 // else, map 1 to the indexed value
 			}
@@ -105,6 +105,6 @@ public class MaximumOccurringCharacter {
 		 * 
 		 * 
 		 */
-		 */
+		 
 	}
 }

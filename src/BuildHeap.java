@@ -72,7 +72,7 @@ public class BuildHeap {
     
     
     // Builds the min heap
-    private void minHeap() {
+    private void buildMinHeap() {
     	swaps = new ArrayList<Swap>(); // Resizable array
     	int i = data.length;
     	
@@ -80,17 +80,13 @@ public class BuildHeap {
     	for (int x = i/2; x >= 1; x--) {
     		minHeap(x);
     	}
-    	
-    
-    	
     }
     
     // Selects a value of a node and moves it down the tree (trades places with child node who's value is smallest)
     private void minHeap(int position) {
     	int x = position; // var x set to position
-    	int left = 2 * position;
-    	int right = (2 * position) + 1;
-    	
+    	int left = (2 * position) + 1;
+    	int right = (2 * position) + 2;
     	
     	while (position != x) {
     		
@@ -117,8 +113,8 @@ public class BuildHeap {
         in = new FastScanner();
         out = new PrintWriter(new BufferedOutputStream(System.out));
         readData();
-        generateSwaps();
-        minHeap();
+       // generateSwaps();
+        buildMinHeap();
         writeResponse();
         out.close();
     }
